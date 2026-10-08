@@ -5,42 +5,64 @@ import usersData from "@/data/user.json";
 import type { User } from "@/types/user";
 
 type GenderFilter = "all" | "male" | "female";
+type AgeFilter = "all" | "adult";
 
 const users: User[] = usersData;
 const genderFilter = ref<GenderFilter>("all");
+const ageFilter = ref<AgeFilter>("all");
 
 const filteredUsers = computed<User[]>(() => {
-  if (genderFilter.value === "all") {
-    return users;
-  }
-  return users.filter((user) => user.gender === genderFilter.value);
+  return users.filter((user) => {
+    const matchesGender = genderFilter.value === "all" || user.gender === genderFilter.value;
+    const matchesAge = ageFilter.value === "all" || user.dob.age >= 18;
+    return matchesGender && matchesAge;
+  });
 });
 </script>
 
 <template>
   <section class="users">
     <div class="users__toolbar">
-      <button
-        class="users__button"
-        :class="{ 'users__button--active': genderFilter === 'all' }"
-        @click="genderFilter = 'all'"
-      >
-        Всі
-      </button>
-      <button
-        class="users__button"
-        :class="{ 'users__button--active': genderFilter === 'male' }"
-        @click="genderFilter = 'male'"
-      >
-        Чоловіки
-      </button>
-      <button
-        class="users__button"
-        :class="{ 'users__button--active': genderFilter === 'female' }"
-        @click="genderFilter = 'female'"
-      >
-        Жінки
-      </button>
+      <div class="users__group">
+        <button
+          class="users__button"
+          :class="{ 'users__button--active': genderFilter === 'all' }"
+          @click="genderFilter = 'all'"
+        >
+          Всі
+        </button>
+        <button
+          class="users__button"
+          :class="{ 'users__button--active': genderFilter === 'male' }"
+          @click="genderFilter = 'male'"
+        >
+          Чоловіки
+        </button>
+        <button
+          class="users__button"
+          :class="{ 'users__button--active': genderFilter === 'female' }"
+          @click="genderFilter = 'female'"
+        >
+          Жінки
+        </button>
+      </div>
+
+      <div class="users__group">
+        <button
+          class="users__button"
+          :class="{ 'users__button--active': ageFilter === 'all' }"
+          @click="ageFilter = 'all'"
+        >
+          Всі
+        </button>
+        <button
+          class="users__button"
+          :class="{ 'users__button--active': ageFilter === 'adult' }"
+          @click="ageFilter = 'adult'"
+        >
+          18+
+        </button>
+      </div>
     </div>
 
     <div v-if="filteredUsers.length" class="users__list">
@@ -60,8 +82,14 @@ const filteredUsers = computed<User[]>(() => {
 .users__toolbar {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 24px;
   margin-bottom: 24px;
+}
+
+.users__group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .users__button {
