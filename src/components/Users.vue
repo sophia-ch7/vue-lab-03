@@ -37,6 +37,12 @@ const visibleUsers = computed<User[]>(() => {
       return result;
   }
 });
+
+function resetAll(): void {
+  genderFilter.value = "all";
+  ageFilter.value = "all";
+  sortOrder.value = "none";
+}
 </script>
 
 <template>
@@ -112,6 +118,10 @@ const visibleUsers = computed<User[]>(() => {
         >
           Вік ↓
         </button>
+      </div>
+
+      <div class="users__group">
+        <button class="users__button" @click="resetAll">Очистити все</button>
       </div>
     </div>
 
