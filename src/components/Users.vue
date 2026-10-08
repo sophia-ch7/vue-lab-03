@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import userData from "@/data/user.json";
 import type { User } from "@/types/user";
 
 const user: User = userData;
+const isDetailsVisible = ref(false);
 </script>
 
 <template>
@@ -34,6 +36,12 @@ const user: User = userData;
         {{ hobby }}
       </li>
     </ul>
+    <button class="user-card__toggle" @click="isDetailsVisible = !isDetailsVisible">
+      About me
+    </button>
+    <p v-show="isDetailsVisible" class="user-card__details">
+      {{ user.details }}
+    </p>
   </div>
 </template>
 
@@ -100,5 +108,22 @@ const user: User = userData;
   color: #2a4ba0;
   border-radius: 999px;
   font-size: 14px;
+}
+
+.user-card__toggle {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #1c2541;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.user-card__details {
+  margin: 12px 0 0;
+  color: #5c6784;
 }
 </style>
