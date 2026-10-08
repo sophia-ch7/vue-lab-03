@@ -6,7 +6,15 @@ const user: User = userData;
 </script>
 
 <template>
-  <div class="user-card">
+  <div
+    class="user-card"
+    :class="{
+      'user-card--minor': user.dob.age < 18,
+      'user-card--young': user.dob.age >= 18 && user.dob.age <= 30,
+      'user-card--adult': user.dob.age >= 31 && user.dob.age <= 50,
+      'user-card--senior': user.dob.age > 50,
+    }"
+  >
     <img class="user-card__photo" :src="user.picture" alt="Фото користувача" />
     <h2 class="user-card__name">
       {{ user.name.title }}. {{ user.name.first }} {{ user.name.last }}
@@ -39,6 +47,22 @@ const user: User = userData;
   box-shadow: 0 4px 16px rgba(20, 30, 70, 0.12);
   color: #1c2541;
   font-family: Arial, sans-serif;
+}
+
+.user-card--minor {
+  background: #fff3d6;
+}
+
+.user-card--young {
+  background: #e3f6e8;
+}
+
+.user-card--adult {
+  background: #e3edff;
+}
+
+.user-card--senior {
+  background: #f1e5ff;
 }
 
 .user-card__photo {
