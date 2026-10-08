@@ -21,6 +21,11 @@ const user: User = userData;
     <p class="user-card__line">{{ user.email }}</p>
     <p class="user-card__line">{{ user.phone }}</p>
     <p class="user-card__line">{{ user.cell }}</p>
+    <ul class="user-card__hobbies">
+      <li v-for="hobby in user.hobbies" :key="hobby" class="user-card__hobby">
+        {{ hobby }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -54,5 +59,22 @@ const user: User = userData;
 
 .user-card__line {
   margin: 6px 0;
+}
+
+.user-card__hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 16px 0 0;
+  list-style: none;
+}
+
+.user-card__hobby {
+  padding: 4px 12px;
+  background: #e8efff;
+  color: #2a4ba0;
+  border-radius: 999px;
+  font-size: 14px;
 }
 </style>
