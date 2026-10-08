@@ -1,33 +1,233 @@
-{
-  "id": 1,
-  "gender": "female",
-  "name": {
-    "title": "Mrs",
-    "first": "Emma",
-    "last": "Lampi"
-  },
-  "location": {
-    "street": {
-      "number": 2304,
-      "name": "Siilitie"
+[
+  {
+    "id": 1,
+    "gender": "female",
+    "name": { "title": "Mrs", "first": "Emma", "last": "Lampi" },
+    "location": {
+      "street": { "number": 2304, "name": "Siilitie" },
+      "city": "Hausjärvi",
+      "state": "Uusimaa",
+      "country": "Finland",
+      "postcode": 98555,
+      "timezone": {
+        "offset": "+8:00",
+        "description": "Beijing, Perth, Singapore, Hong Kong"
+      }
     },
-    "city": "Hausjärvi",
-    "state": "Uusimaa",
-    "country": "Finland",
-    "postcode": 98555,
-    "timezone": {
-      "offset": "+8:00",
-      "description": "Beijing, Perth, Singapore, Hong Kong"
-    }
+    "email": "emma.lampi@example.com",
+    "dob": { "date": "2001-03-08T01:39:19.084Z", "age": 25 },
+    "phone": "02-689-410",
+    "cell": "043-730-12-94",
+    "picture": "/users/user-1.jpg",
+    "hobbies": [
+      "Travel",
+      "Photography",
+      "Hiking",
+      "Reading",
+      "Cooking",
+      "Music"
+    ],
+    "details": "Люблю подорожі та фотографію. Працюю дизайнером."
   },
-  "email": "emma.lampi@example.com",
-  "dob": {
-    "date": "2001-03-08T01:39:19.084Z",
-    "age": 25
+  {
+    "id": 2,
+    "gender": "male",
+    "name": { "title": "Mr", "first": "Liam", "last": "Korhonen" },
+    "location": {
+      "street": { "number": 12, "name": "Mannerheimintie" },
+      "city": "Helsinki",
+      "state": "Uusimaa",
+      "country": "Finland",
+      "postcode": 100,
+      "timezone": { "offset": "+2:00", "description": "Helsinki, Kyiv, Riga" }
+    },
+    "email": "liam.korhonen@example.com",
+    "dob": { "date": "1992-06-14T10:12:00.000Z", "age": 34 },
+    "phone": "09-123-456",
+    "cell": "040-111-22-33",
+    "picture": "/users/user-2.jpg",
+    "hobbies": ["Cycling", "Chess", "Coffee"],
+    "details": "Програміст, у вільний час їжджу на велосипеді."
   },
-  "phone": "02-689-410",
-  "cell": "043-730-12-94",
-  "picture": "https://randomuser.me/api/portraits/women/87.jpg",
-  "hobbies": ["Travel", "Photography", "Hiking", "Reading", "Cooking", "Music"],
-  "details": "Люблю подорожі та фотографію. Працюю дизайнером."
-}
+  {
+    "id": 3,
+    "gender": "female",
+    "name": { "title": "Miss", "first": "Sofia", "last": "Rossi" },
+    "location": {
+      "street": { "number": 45, "name": "Via Roma" },
+      "city": "Milan",
+      "state": "Lombardy",
+      "country": "Italy",
+      "postcode": 20121,
+      "timezone": {
+        "offset": "+1:00",
+        "description": "Brussels, Copenhagen, Madrid, Paris"
+      }
+    },
+    "email": "sofia.rossi@example.com",
+    "dob": { "date": "2009-04-21T08:30:00.000Z", "age": 17 },
+    "phone": "02-555-1234",
+    "cell": "331-222-33-44",
+    "picture": "/users/user-3.jpg",
+    "hobbies": ["Drawing", "Dancing"],
+    "details": "Школярка, мрію стати архітекторкою."
+  },
+  {
+    "id": 4,
+    "gender": "male",
+    "name": { "title": "Mr", "first": "Noah", "last": "Müller" },
+    "location": {
+      "street": { "number": 8, "name": "Hauptstrasse" },
+      "city": "Berlin",
+      "state": "Berlin",
+      "country": "Germany",
+      "postcode": 10115,
+      "timezone": {
+        "offset": "+1:00",
+        "description": "Brussels, Copenhagen, Madrid, Paris"
+      }
+    },
+    "email": "noah.mueller@example.com",
+    "dob": { "date": "1985-01-30T14:00:00.000Z", "age": 41 },
+    "phone": "030-987-654",
+    "cell": "0151-234-56-78",
+    "picture": "/users/user-4.jpg",
+    "hobbies": ["Football", "Cooking", "Gardening"],
+    "details": "Інженер, люблю готувати для друзів."
+  },
+  {
+    "id": 5,
+    "gender": "female",
+    "name": { "title": "Mrs", "first": "Olivia", "last": "Dubois" },
+    "location": {
+      "street": { "number": 77, "name": "Rue de la République" },
+      "city": "Lyon",
+      "state": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "postcode": 69002,
+      "timezone": {
+        "offset": "+1:00",
+        "description": "Brussels, Copenhagen, Madrid, Paris"
+      }
+    },
+    "email": "olivia.dubois@example.com",
+    "dob": { "date": "1971-09-02T06:45:00.000Z", "age": 55 },
+    "phone": "04-72-12-34-56",
+    "cell": "06-12-34-56-78",
+    "picture": "/users/user-5.jpg",
+    "hobbies": ["Painting", "Reading", "Wine tasting", "Yoga"],
+    "details": "Викладачка мистецтва, веду власну студію живопису."
+  },
+  {
+    "id": 6,
+    "gender": "male",
+    "name": { "title": "Mr", "first": "Lucas", "last": "Silva" },
+    "location": {
+      "street": { "number": 19, "name": "Rua das Flores" },
+      "city": "Porto",
+      "state": "Porto",
+      "country": "Portugal",
+      "postcode": 4050,
+      "timezone": {
+        "offset": "0:00",
+        "description": "Western Europe Time, London, Lisbon"
+      }
+    },
+    "email": "lucas.silva@example.com",
+    "dob": { "date": "2011-02-11T12:00:00.000Z", "age": 15 },
+    "phone": "22-345-67-89",
+    "cell": "912-345-678",
+    "picture": "/users/user-6.jpg",
+    "hobbies": ["Gaming", "Skateboarding"],
+    "details": "Люблю відеоігри та скейтборд."
+  },
+  {
+    "id": 7,
+    "gender": "female",
+    "name": { "title": "Ms", "first": "Mia", "last": "Kowalska" },
+    "location": {
+      "street": { "number": 5, "name": "Ulica Floriańska" },
+      "city": "Kraków",
+      "state": "Lesser Poland",
+      "country": "Poland",
+      "postcode": 31100,
+      "timezone": {
+        "offset": "+1:00",
+        "description": "Brussels, Copenhagen, Madrid, Paris"
+      }
+    },
+    "email": "mia.kowalska@example.com",
+    "dob": { "date": "1997-07-19T09:20:00.000Z", "age": 29 },
+    "phone": "12-345-67-89",
+    "cell": "501-234-567",
+    "picture": "/users/user-7.jpg",
+    "hobbies": ["Running", "Photography", "Travel"],
+    "details": "Маркетолог, учасниця півмарафонів."
+  },
+  {
+    "id": 8,
+    "gender": "male",
+    "name": { "title": "Mr", "first": "Ethan", "last": "Brown" },
+    "location": {
+      "street": { "number": 231, "name": "Park Lane" },
+      "city": "Leeds",
+      "state": "West Yorkshire",
+      "country": "United Kingdom",
+      "postcode": 12345,
+      "timezone": {
+        "offset": "0:00",
+        "description": "Western Europe Time, London, Lisbon"
+      }
+    },
+    "email": "ethan.brown@example.com",
+    "dob": { "date": "1963-03-25T17:10:00.000Z", "age": 63 },
+    "phone": "0113-496-0000",
+    "cell": "07700-900-123",
+    "picture": "/users/user-8.jpg",
+    "hobbies": ["Fishing", "Woodworking"],
+    "details": "На пенсії, майструю меблі у власній майстерні."
+  },
+  {
+    "id": 9,
+    "gender": "female",
+    "name": { "title": "Mrs", "first": "Isabella", "last": "García" },
+    "location": {
+      "street": { "number": 36, "name": "Calle Mayor" },
+      "city": "Valencia",
+      "state": "Valencian Community",
+      "country": "Spain",
+      "postcode": 46001,
+      "timezone": {
+        "offset": "+1:00",
+        "description": "Brussels, Copenhagen, Madrid, Paris"
+      }
+    },
+    "email": "isabella.garcia@example.com",
+    "dob": { "date": "1979-05-08T11:05:00.000Z", "age": 47 },
+    "phone": "96-123-45-67",
+    "cell": "612-345-678",
+    "picture": "/users/user-9.jpg",
+    "hobbies": ["Salsa", "Cooking", "Gardening"],
+    "details": "Лікарка, обожнюю танцювати сальсу."
+  },
+  {
+    "id": 10,
+    "gender": "male",
+    "name": { "title": "Mr", "first": "Oleksandr", "last": "Shevchenko" },
+    "location": {
+      "street": { "number": 14, "name": "Rynok Square" },
+      "city": "Lviv",
+      "state": "Lviv Oblast",
+      "country": "Ukraine",
+      "postcode": 79000,
+      "timezone": { "offset": "+2:00", "description": "Helsinki, Kyiv, Riga" }
+    },
+    "email": "oleksandr.shevchenko@example.com",
+    "dob": { "date": "2004-08-17T07:55:00.000Z", "age": 22 },
+    "phone": "032-234-56-78",
+    "cell": "067-123-45-67",
+    "picture": "/users/user-10.jpg",
+    "hobbies": ["Music", "Hiking", "Football"],
+    "details": "Студент, граю на гітарі в гурті."
+  }
+]
