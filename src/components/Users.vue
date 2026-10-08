@@ -11,7 +11,10 @@ const user: User = userData;
     <h2 class="user-card__name">
       {{ user.name.title }}. {{ user.name.first }} {{ user.name.last }}
     </h2>
-    <p class="user-card__meta">{{ user.gender }} | {{ user.dob.age }} years</p>
+    <p class="user-card__meta">
+      {{ user.gender }}
+      <span v-if="user.dob.age > 18">| {{ user.dob.age }} years</span>
+    </p>
     <p class="user-card__line">
       {{ user.location.city }}, {{ user.location.state }}, {{ user.location.country }}
     </p>
